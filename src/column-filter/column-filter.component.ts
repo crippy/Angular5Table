@@ -1,6 +1,5 @@
 import {
   Component,
-  OnInit,
   ViewChild,
   ElementRef,
   Input,
@@ -14,15 +13,15 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/throttleTime';
 import 'rxjs/add/observable/fromEvent';
 
-
 import { Filter } from '../interfaces';
 
 @Component({
-  selector: 'robinsons-table-filter',
-  templateUrl: './column-filter.component.html',
-  styleUrls: ['./column-filter.component.scss']
+  selector: 'allsop-table-filter',
+  template: `
+    <input type="text" *ngIf="filter.type === 'text'" #input> <select *ngIf="filter.type==='select'" (change)="change($event)"> <option *ngFor="let option of filter.options" [value]="option">{{option}}</option> </select> <span *ngIf="filter.type==='date-time'"> <my-date-picker name="mydate" [options]="robinsonsDatePickerOptions" (dateChanged)="change($event)"> </my-date-picker> </span>
+  `
 })
-export class ColumnFilterComponent implements OnInit {
+export class ColumnFilterComponent {
   @Input('key') key: string = '';
   @Input('filter') filter: Filter = { type: '' };
   @Output('callback') callback = new EventEmitter<any>();
@@ -33,10 +32,6 @@ export class ColumnFilterComponent implements OnInit {
   };
 
   constructor(private ngzone: NgZone) { }
-
-  ngOnInit() {
-    console.log(this.filter, ' will exist')
-  }
 
   ngAfterViewInit() {
     const self = this;
@@ -54,5 +49,4 @@ export class ColumnFilterComponent implements OnInit {
   change(event) {
     this.callback.emit({ key: this.key, value: event, type: this.filter.type });
   }
-
 }
