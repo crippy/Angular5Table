@@ -1,0 +1,50 @@
+.button-container {
+  display: flex;
+  flex-flow: row nowrap;
+
+  .button {
+    border-radius: 5px;
+    display: flex;
+    flex-grow: row nowrap;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.dark {
+      font-size: 1.6rem;
+      font-weight: lighter;
+      padding: 11px 40px;
+      background: #4D4D4D;
+      color: #fff;
+
+      .label {
+        font-size: 1.2rem;
+      }
+    }
+
+    &.light {
+      margin: 0 3px 0 0;
+      padding: 7px 12px;
+      border: 1px solid #D6D6D6;
+      color: #333;
+
+      .icon {
+        font-size: 2rem;
+        font-size: 20px;
+        padding-right: 7px;
+      }
+
+      .label {
+        font-size: 1.5rem;
+        font-size: 15px;
+      }
+
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

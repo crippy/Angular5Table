@@ -1,0 +1,15 @@
+<!-- SHOW ME WHEN VALUE IS A STRING -->
+<p *ngIf="definition.type === 'string'">{{data}}</p>
+<p *ngIf="definition.type === 'date'">{{data | date: 'dd/MM/yyyy HH:mm'}}</p>
+
+<!-- THIS WILL RENDER WHEN WE HAVE A DIFFERNT TYPE TO RENDER (buttons, input, select, ...) -->
+<div class="button-container" *ngIf="definition.type === 'button'">
+  <div class="button {{btn.class}}" *ngFor="let btn of definition.values" (click)="btn.callback($event, btn)">
+    <div *ngIf="btn.icon !== ''" class="icon icon-{{btn.icon}}"></div>
+    <div class="label">{{btn.key ? data[btn.key] : btn.label}}</div>
+  </div>
+</div>
+
+<div class="checkbox-container" *ngIf="definition.type === 'checkbox'">
+  <input type="checkbox" [checked]="data === true" [disabled]="data === -1" (change)="onCallBack($event)">
+</div>

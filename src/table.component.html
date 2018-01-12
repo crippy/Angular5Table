@@ -1,0 +1,58 @@
+<div class="table">
+
+
+  <div class="pagination">
+
+    <span class="total-pages">{{totalRecordCount}} of 56 items</span>
+
+
+    <div class="pagination-options">
+      <div class="page-size">
+        <select>
+            <option value="25">25</option>
+          </select> per page
+      </div>
+
+      <div class="page-selector">
+        <div class="btn btn-prev">&lt;</div>
+        <input type="text" value="1"> of 3
+        <div class="btn btn-next">&gt;</div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="heading">
+    <div class="column" *ngFor="let header of data.fields">
+      <!-- MAKE A HEADER "COLUMN" COMPONENT -->
+      <!-- <table-header sort="false" title="Applicant #"></table-header> -->
+      <!-- {{header.title}} -->
+      <!-- {
+        header.title: 'Blah',
+        sort: 1 // asc
+        sort: -1 // desc
+        sort: 0 // default
+        sort: false // dont allow sort
+      } -->
+      <robinsons-column-header [data]="header"></robinsons-column-header>
+    </div>
+  </div>
+  <div class="filters">
+    <div class="column" *ngFor="let header of data.fields">
+      <!-- MAKE A FILTER "COLIMN" COMPONENT -->
+      <!-- <table-filter type="text|select|date-time|etc" options="for-select" *ngIf="filters.filter"></table-filter> -->
+      <robinsons-table-filter [filter]="header.filter" [key]="header.key" (callback)="header.filter.callback($event)"></robinsons-table-filter>
+    </div>
+  </div>
+  <div class="body">
+    <div class="row" *ngFor="let row of data.data; let i = index">
+      <div class="column" *ngFor="let header of data.fields">
+        <!-- MAKE A TABLE DATA COLUMN COMPONENT -->
+        <!-- <table-data type="text|buttons|checkbox" options="checkbox|buttons"></table-data> -->
+        <!-- {{row[header.key]}} -->
+        <robinsons-column-data [data]="row[header.key]" [index]="i" [definition]="header.definition" [key]="header.key" (callback)="header.definition.callback($event)"></robinsons-column-data>
+      </div>
+    </div>
+  </div>
+</div>
