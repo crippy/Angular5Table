@@ -1,10 +1,10 @@
 {
   "name": "allsop-table",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Generic Angular 5 Table Component",
   "main": "dist/table.component.js",
   "scripts": {
-    "build": "./build.sh",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

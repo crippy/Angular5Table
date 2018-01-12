@@ -24,9 +24,6 @@ let ColumnFilterComponent = class ColumnFilterComponent {
             dateFormat: 'dd/mm/yyyy',
         };
     }
-    ngOnInit() {
-        console.log(this.filter, ' will exist');
-    }
     ngAfterViewInit() {
         const self = this;
         if (this.el) {
@@ -61,9 +58,10 @@ __decorate([
 ], ColumnFilterComponent.prototype, "el", void 0);
 ColumnFilterComponent = __decorate([
     core_1.Component({
-        selector: 'robinsons-table-filter',
-        templateUrl: './column-filter.component.html',
-        styleUrls: ['./column-filter.component.scss']
+        selector: 'allsop-table-filter',
+        template: `
+    <input type="text" *ngIf="filter.type === 'text'" #input> <select *ngIf="filter.type==='select'" (change)="change($event)"> <option *ngFor="let option of filter.options" [value]="option">{{option}}</option> </select> <span *ngIf="filter.type==='date-time'"> <my-date-picker name="mydate" [options]="robinsonsDatePickerOptions" (dateChanged)="change($event)"> </my-date-picker> </span>
+  `
     }),
     __metadata("design:paramtypes", [core_1.NgZone])
 ], ColumnFilterComponent);

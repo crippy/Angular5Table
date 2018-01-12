@@ -11,9 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular/core");
 let ColumnHeaderComponent = class ColumnHeaderComponent {
-    ngOnInit() {
-        console.log(this.data);
-    }
 };
 __decorate([
     core_1.Input('data'),
@@ -21,9 +18,10 @@ __decorate([
 ], ColumnHeaderComponent.prototype, "data", void 0);
 ColumnHeaderComponent = __decorate([
     core_1.Component({
-        selector: 'robinsons-column-header',
-        templateUrl: './column-header.component.html',
-        styleUrls: ['./column-header.component.scss']
+        selector: 'allsop-column-header',
+        template: `
+    <div class="title">{{data.title}}</div> <span *ngIf="data.sorting !== undefined" (click)="data.sorting.callback($event, data.key)"> <i *ngIf="data.sorting.value === -1">asc</i> <i *ngIf="data.sorting.value === 0">desc</i> <i *ngIf="data.sorting.value === 1">-</i> </span>
+  `
     })
 ], ColumnHeaderComponent);
 exports.ColumnHeaderComponent = ColumnHeaderComponent;
