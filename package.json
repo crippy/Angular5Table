@@ -1,0 +1,24 @@
+{
+  "name": "allsop-table",
+  "version": "0.0.0",
+  "description": "Generic Angular 5 Table Component",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crippy/Angular5Table.git"
+  },
+  "keywords": [
+    "Angular5",
+    "Table",
+    "Component"
+  ],
+  "author": "Chris Marks, Matt McNabb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crippy/Angular5Table/issues"
+  },
+  "homepage": "https://github.com/crippy/Angular5Table#readme"
+}
