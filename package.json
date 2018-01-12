@@ -1,6 +1,6 @@
 {
   "name": "allsop-table",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Generic Angular 5 Table Component",
   "main": "dist/table.module.js",
   "scripts": {

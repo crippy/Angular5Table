@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MyDatePickerModule } from 'mydatepicker';
 
 import { TableComponent } from './table.component';
 import { ColumnDataComponent } from './column-data/column-data.component';
@@ -8,7 +9,8 @@ import { ColumnHeaderComponent } from './column-header/column-header.component';
 
 @NgModule({
   imports: [
-    BrowserModule
+    BrowserModule,
+    MyDatePickerModule
   ],
   declarations: [
     TableComponent,

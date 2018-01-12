@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 const platform_browser_1 = require("@angular/platform-browser");
 const core_1 = require("@angular/core");
+const mydatepicker_1 = require("mydatepicker");
 const table_component_1 = require("./table.component");
 const column_data_component_1 = require("./column-data/column-data.component");
 const column_filter_component_1 = require("./column-filter/column-filter.component");
@@ -17,7 +18,8 @@ let AllsopTableModule = class AllsopTableModule {
 AllsopTableModule = __decorate([
     core_1.NgModule({
         imports: [
-            platform_browser_1.BrowserModule
+            platform_browser_1.BrowserModule,
+            mydatepicker_1.MyDatePickerModule
         ],
         declarations: [
             table_component_1.TableComponent,
