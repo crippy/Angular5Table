@@ -1,8 +1,8 @@
 {
   "name": "allsop-table",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Generic Angular 5 Table Component",
-  "main": "dist/table.component.js",
+  "main": "dist/table.module.js",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,10 +23,16 @@
   },
   "homepage": "https://github.com/crippy/Angular5Table#readme",
   "dependencies": {
-    "@angular/core": "^5.2.0",
+    "@angular/cdk": "^5.0.0-rc.1",
+    "@angular/common": "^5.0.0",
+    "@angular/compiler": "^5.0.0",
+    "@angular/core": "^5.0.0",
+    "@angular/platform-browser": "^5.0.0",
+    "@angular/platform-browser-dynamic": "^5.0.0",
+    "lodash": "^4.17.4",
+    "rxjs": "^5.5.5",
     "@angular/forms": "^5.2.0",
-    "mydatepicker": "^2.6.1",
-    "rxjs": "^5.5.6"
+    "mydatepicker": "^2.6.1"
   },
   "devDependencies": {
     "typescript": "^2.6.2"

@@ -1,3 +1,4 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { TableComponent } from './table.component';
@@ -6,6 +7,9 @@ import { ColumnFilterComponent } from './column-filter/column-filter.component';
 import { ColumnHeaderComponent } from './column-header/column-header.component';
 
 @NgModule({
+  imports: [
+    BrowserModule
+  ],
   declarations: [
     TableComponent,
     ColumnDataComponent,
