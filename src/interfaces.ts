@@ -1,4 +1,4 @@
-export interface DefValue {
+export interface DefinitionValue {
   icon: string,
   key: string,
   class: string,
@@ -8,7 +8,7 @@ export interface DefValue {
 
 export interface Definition {
   type: string,
-  values?: DefValue[]
+  values?: DefinitionValue[]
 }
 
 export interface Filter {
@@ -25,7 +25,7 @@ export interface Field {
   key: string,
   filter: Filter | boolean,
   definition: Definition,
-  sorting: HeaderSort
+  sorting: HeaderSort | boolean
 }
 
 export interface TableData {

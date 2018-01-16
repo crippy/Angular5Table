@@ -18,7 +18,15 @@ import { Filter } from '../interfaces';
 @Component({
   selector: 'allsop-table-filter',
   template: `
-    <input type="text" *ngIf="filter.type === 'text'" #input> <select *ngIf="filter.type==='select'" (change)="change($event)"> <option *ngFor="let option of filter.options" [value]="option">{{option}}</option> </select> <span *ngIf="filter.type==='date-time'"> <my-date-picker name="mydate" [options]="robinsonsDatePickerOptions" (dateChanged)="change($event)"> </my-date-picker> </span>
+    <input type="text" *ngIf="filter.type === 'text'" #input>
+
+    <select *ngIf="filter.type==='select'" (change)="change($event)">
+      <option *ngFor="let option of filter.options" [value]="option">{{option}}</option>
+    </select>
+
+    <span *ngIf="filter.type==='date-time'">
+      <my-date-picker name="mydate" [options]="robinsonsDatePickerOptions" (dateChanged)="change($event)"></my-date-picker>
+    </span>
   `
 })
 export class ColumnFilterComponent {

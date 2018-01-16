@@ -1,40 +1,70 @@
 {
-  "name": "allsop-table",
-  "version": "0.0.5",
-  "description": "Generic Angular 5 Table Component",
-  "main": "dist/table.module.js",
-  "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_from": "allsop-table@0.0.5",
+  "_id": "allsop-table@0.0.5",
+  "_inBundle": false,
+  "_integrity": "sha512-VXIzMrysSaM7ZIVNow4ENC0O90acM/VWBrQ/sktFIGrqsY2Y05M6S/LNjcYUe6rHYDCNhLRK8cCMhHSJfDa7fg==",
+  "_location": "/allsop-table",
+  "_phantomChildren": {
+    "tslib": "1.8.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/crippy/Angular5Table.git"
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "allsop-table@0.0.5",
+    "name": "allsop-table",
+    "escapedName": "allsop-table",
+    "rawSpec": "0.0.5",
+    "saveSpec": null,
+    "fetchSpec": "0.0.5"
   },
-  "keywords": [
-    "Angular5",
-    "Table",
-    "Component"
+  "_requiredBy": [
+    "#USER",
+    "/"
   ],
-  "author": "Chris Marks, Matt McNabb",
-  "license": "ISC",
+  "_resolved": "https://registry.npmjs.org/allsop-table/-/allsop-table-0.0.5.tgz",
+  "_shasum": "8af89f5fdbe6f52abc7a904e7660bf0476adc313",
+  "_spec": "allsop-table@0.0.5",
+  "_where": "/Users/matt/git/Graham.WEB",
+  "author": {
+    "name": "Chris Marks, Matt McNabb"
+  },
   "bugs": {
     "url": "https://github.com/crippy/Angular5Table/issues"
   },
-  "homepage": "https://github.com/crippy/Angular5Table#readme",
+  "bundleDependencies": false,
   "dependencies": {
     "@angular/cdk": "^5.0.0-rc.1",
     "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
     "@angular/core": "^5.0.0",
+    "@angular/forms": "^5.2.0",
     "@angular/platform-browser": "^5.0.0",
     "@angular/platform-browser-dynamic": "^5.0.0",
     "lodash": "^4.17.4",
-    "rxjs": "^5.5.5",
-    "@angular/forms": "^5.2.0",
-    "mydatepicker": "^2.6.1"
+    "mydatepicker": "^2.6.1",
+    "rxjs": "^5.5.5"
   },
+  "deprecated": false,
+  "description": "Generic Angular 5 Table Component",
   "devDependencies": {
     "typescript": "^2.6.2"
-  }
+  },
+  "homepage": "https://github.com/crippy/Angular5Table#readme",
+  "keywords": [
+    "Angular5",
+    "Table",
+    "Component"
+  ],
+  "license": "ISC",
+  "main": "dist/table.module.js",
+  "name": "allsop-table",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crippy/Angular5Table.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.5"
 }
